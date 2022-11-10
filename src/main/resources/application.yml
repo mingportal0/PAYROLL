@@ -1,0 +1,29 @@
+spring:
+  profiles: 
+    active: local
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: pgadmin
+mybatis:
+  config-location: "classpath:mybatis-config.xml"
+  
+logging:
+  pattern:
+    console: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
+    file: "%-4relative [%thread] %-5level %logger{35} - %msg%n"
+  logback:
+    rollingpolicy:
+      file-name-pattern: "${LOG_FILE}.%d{yyyy-MM-dd}_%i.zip"
+  level:
+    org:
+      springframework: DEBUG
+  file:
+    path: logs
+    max-history: 7
+    max-size: 5KB
+    total-size-cap: 1MB

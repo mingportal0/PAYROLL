@@ -1,0 +1,8 @@
+test:
+  language: "한글"
+  welcome: "안녕, {0}"
+  msg001: "회원가입"
+  msg002: "userId"
+  msg003: "userName"
+  msg004: "password"
+  msg005: "가입완료"
