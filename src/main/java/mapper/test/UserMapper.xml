@@ -9,4 +9,9 @@
         (USER_ID, USER_PW, USER_NAME, USER_AUTH)
         VALUES(#{userId},#{userPw},#{userName},#{userAuth});
     </insert>
+    
+    <select id="getUserAccount" resultType="net.cj.payroll.test.login.UserVo">
+		SELECT * FROM TB_USER
+		WHERE USER_ID= #{userId}
+	</select>
 </mapper>

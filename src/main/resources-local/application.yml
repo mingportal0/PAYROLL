@@ -1,0 +1,26 @@
+test:
+  env: local
+  
+spring:
+  profiles: 
+    active: local
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:postgresql://localhost:5432/postgres
+    username: ENC(7rtEDcCni0P3qRSlA6MINZ4/zU0+SrlL)
+    password: ENC(g8eZUnDJjpQTNC/kTmA+ow==)
+    hikari:
+      connectionTimeout : 30000
+      maximumPoolSize : 30
+      maxLifetime : 1800000
+      connectionTestQuery : SELECT 1
+    
+mybatis:
+  config-location: "classpath:mybatis-config.xml"
+
+logging:
+  level:
+    root: DEBUG

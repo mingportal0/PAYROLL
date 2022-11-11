@@ -11,4 +11,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserMapper {
 
 	void saveUser(UserVo userVo);
+	
+	UserVo getUserAccount(String userId);
 }
