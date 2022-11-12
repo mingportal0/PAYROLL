@@ -1,6 +1,10 @@
 package net.cj.payroll.test.login;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
+
+import net.cj.payroll.test.UserRespDto;
 
 /**
  * 
@@ -13,4 +17,10 @@ public interface UserMapper {
 	void saveUser(UserVo userVo);
 	
 	UserVo getUserAccount(String userId);
+
+	List<UserRespDto> getUserData();
+
+	UserRespDto getUserInfo(String userId);
+
+	void saveUserInfo(UserRespDto dto);
 }

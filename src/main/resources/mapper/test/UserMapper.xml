@@ -10,8 +10,24 @@
         VALUES(#{userId},#{userPw},#{userName},#{userAuth});
     </insert>
     
+	<update id="saveUserInfo" parameterType="net.cj.payroll.test.UserRespDto">
+		UPDATE TB_USER
+			SET user_info = #{userInfo}
+		WHERE user_id = #{userId}
+	</update>
+	
     <select id="getUserAccount" resultType="net.cj.payroll.test.login.UserVo">
 		SELECT * FROM TB_USER
 		WHERE USER_ID= #{userId}
+	</select>
+	
+	<select id="getUserData" resultType="net.cj.payroll.test.UserRespDto">
+		SELECT user_id, user_name, user_auth, user_info FROM TB_USER
+	</select>
+	
+	<select id="getUserInfo" resultType="net.cj.payroll.test.UserRespDto">
+		SELECT user_id, user_name, user_auth, user_info
+		FROM TB_USER
+		WHERE user_id = #{userId}
 	</select>
 </mapper>

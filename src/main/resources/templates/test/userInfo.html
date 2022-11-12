@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+<!-- Content -->
+<div class="container-fluid mt-3" layout:fragment="content">
+	<div class="card" style="width:50%">
+		<div class="card-body">
+			<h4 class="card-title">회원 정보</h4>
+			<p class="card-text"><span th:text="${user.userName}"/>님의 회원정보 입니다.</p>
+			<input type="hidden" id="userId" th:value="${user.userId}" />
+			<textarea class="summernote" name="editordata" th:text="${user.userInfo}" id="userInfo"></textarea><br/>
+			<button class="btn btn-primary" id="btn-save">저장</button>
+		</div>
+	</div>
+</div>
+<th:block layout:fragment="script">
+    <script th:src="@{/js/summernote.js}"></script>
+</th:block>
+</html>

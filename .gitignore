@@ -3,7 +3,6 @@ target/
 src/main/**/target/
 src/test/**/target/
 logs/
-.mvn/
 
 ### STS ###
 bin/

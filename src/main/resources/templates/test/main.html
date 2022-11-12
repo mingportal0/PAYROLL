@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+<!-- Content -->
+<div class="container-fluid mt-3" layout:fragment="content">
+  <h3>유저 현황</h3>
+  <p>로그인 유저 리스트 입니다.</p>
+  <div id="grid"></div>
+</div>
+<th:block layout:fragment="script">
+    <script th:src="@{/js/common.js}"></script>
+</th:block>
+</html>
