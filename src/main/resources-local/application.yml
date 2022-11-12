@@ -1,3 +1,5 @@
+test:
+  env: local
 spring:
   profiles: 
     active: local
